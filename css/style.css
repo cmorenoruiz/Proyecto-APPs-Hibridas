@@ -1,0 +1,12 @@
+<!--mi hoja de estilos-->
+ @font-face {
+      font-family: "Josefin Sans";
+      src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+    }
+    
+    p { font-family: 'Josefin Sans', sans-serif;
+    }
+	body:{
+	background-color: fucsia;
+	font-size: 1em;
+	}
