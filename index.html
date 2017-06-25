@@ -10,8 +10,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="Cristina Moreno Ruiz">
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <!--Iconos gratuitos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Para que la web se adapte al ancho del dispositvo dond ese visualiza-->
-    <meta name="viewport" content="width=device-width"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" > 
 </head>
 
 <body>
@@ -19,9 +21,15 @@
 		<p>Pon música y se parará cuando pasen tres minutos.</p>
 		<p>Para no malgastar el agua, tu ducha no debería durar más de tres minutos.</p>
 	</header>
-	<section>
-		<h2>Audio</h2>
-		<audio controls loop   src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" >Your browser does not support the <code>audio</code> element.
+	<section class="flex-container">
+		<h2>Dúchate</h2>
+		<button type="button" onclick="reproduceMusica()">
+			<i class="fa fa-shower" style="font-size:10em;color:lightblue;"></i>
+		</button>
+		<!--Intentaba que la siguiente imagen se ajustara al tamaño del dispositivo con CSS, pero no lo he conseguido.
+		<img alt="icono con una persona duchándose" src="images/ducha.png">
+		Fuente https://pixabay.com/en/shower-douche-spray-cleaning-99263/-->
+		<audio id="myAudio" controls loop src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" >Your browser does not support the <code>audio</code> element.
 		</audio>
 	</section>
 	<footer>
@@ -30,6 +38,18 @@
 		<br/>
 
 	</footer>
+
+<script type="text/javascript">
+	var myAudio=document.getElementById("myAudio");
+	function reproduceMusica() {
+	    if (myAudio.paused) {
+	    	myAudio.play();
+	    	setInterval(myAudio.pause();3*60*1000);
+	    }else {myAudio.pause();
+	    }
+	}
+</script>
+
 
 
 </body>

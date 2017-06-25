@@ -1,13 +1,59 @@
 <!--mi hoja de estilos-->
- @font-face {
-      font-family: "Josefin Sans";
-      src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
-    }
-    
-    p {
-    	font-family: 'Josefin Sans', sans-serif;
-    }
-	body:{
-		background-color: pink;
-		font-size: 1em;
-	}
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+@-ms-viewport{
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+}
+
+*{
+  box-sizing: border-box;
+}
+p {
+ font-family: 'Josefin Sans', sans-serif;
+}
+body:{
+  background-color: pink;
+  font-size: 1em;
+}
+img:{
+  display:block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  /*width: device-width;*/
+}
+.flex-container:{
+  /* para compatibilidad con navegadores
+antiguos */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  /* definimos el contenedor flex*/
+  display: flex;
+  display: -webkit-flex;
+ -webkit-flex-flow: row wrap;
+  /*alineación en el eje principal*/
+  justify-content: flex-end;
+}
+/* para tablets*/
+@media all and (max-width: 800px) {
+  .flex-container {
+    /* alineación que ocupe todo el espacion en el eje principal*/
+    justify-content: space-around;
+  }
+}
+
+/* para móviles */
+@media all and (max-width: 600px) {
+  .flex-container {
+    -webkit-flex-flow: column wrap;
+     /* flex-direction en columna y flex-wrap para que ocupen varias líneas*/
+    flex-flow: column wrap;
+    padding: 0;
+  }
