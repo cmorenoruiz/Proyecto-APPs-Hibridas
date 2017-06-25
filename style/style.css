@@ -4,9 +4,10 @@
       src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
     }
     
-    p { font-family: 'Josefin Sans', sans-serif;
+    p {
+    	font-family: 'Josefin Sans', sans-serif;
     }
 	body:{
-	background-color: fucsia;
-	font-size: 1em;
+		background-color: pink;
+		font-size: 1em;
 	}
